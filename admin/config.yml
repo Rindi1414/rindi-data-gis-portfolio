@@ -70,16 +70,7 @@ collections:
                 fields:
                   - {label: "Image", name: "image", widget: "image"}
 
-          - label: "Education"
-            name: "education"
-            widget: "object"
-            fields:
-              - {label: "Degree", name: "degree", widget: "string"}
-              - {label: "Institution", name: "institution", widget: "string"}
-              - {label: "Period", name: "period", widget: "string"}
-              - {label: "GPA", name: "gpa", widget: "string"}
-
-            - label: "Organization & Volunteer"
+          - label: "Organization & Volunteer"
             name: "organizations"
             widget: "list"
             required: false
@@ -95,6 +86,15 @@ collections:
                 required: false
                 fields:
                   - {label: "Image", name: "image", widget: "image"}
+
+          - label: "Education"
+            name: "education"
+            widget: "object"
+            fields:
+              - {label: "Degree", name: "degree", widget: "string"}
+              - {label: "Institution", name: "institution", widget: "string"}
+              - {label: "Period", name: "period", widget: "string"}
+              - {label: "GPA", name: "gpa", widget: "string"}
 
           - label: "Certificates"
             name: "certificates"
