@@ -14,7 +14,9 @@ collections:
         name: "content"
         file: "data/content.json"
         format: "json"
+
         fields:
+
           - label: "Profile"
             name: "profile"
             widget: "object"
@@ -52,7 +54,7 @@ collections:
               - {label: "Project Image", name: "image", widget: "image", required: false}
               - {label: "Project Link", name: "link", widget: "string", required: false}
 
-            - label: "Experience"
+          - label: "Experience"
             name: "experience"
             widget: "list"
             fields:
