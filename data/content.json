@@ -1,6 +1,6 @@
 {
   "profile": {
-    "name": "Rindi Tri Setyaningsih",
+    "name": "https://rindi-data-gis-portfolio.netlify.app/admin/?utm_source=chatgpt.com#/collections/portfolioRindi Tri Setyaningsih",
     "headline": "Data Analyst × GIS",
     "intro": "GIS graduate with a strong interest in data analysis, visualization, and geospatial technology. I enjoy turning structured and spatial data into clear, useful insights.",
     "aboutTitle": "Data-minded. Spatially curious.",
@@ -79,7 +79,7 @@
   ],
   "projects": [
     {
-      "title": "SIPTALA — Landslide Reporting WebGIS",
+      "title": "SIPTALA — Landslide Reporting WebGIS ",
       "category": "GIS / WebGIS",
       "description": "WebGIS for landslide reporting and identification of landslide-prone areas in Karanganyar, integrating spatial data and web mapping.",
       "tools": [
@@ -88,7 +88,7 @@
         "PostGIS",
         "GeoServer"
       ],
-      "image": "",
+      "image": "/assets/uploads/beranda.png",
       "link": ""
     },
     {
