@@ -501,3 +501,25 @@ if (menuButton && nav) {
 ========================= */
 
 loadPortfolio();
+
+// ================================
+// MOBILE MENU
+// ================================
+
+const menuButton = document.querySelector(".menu");
+const nav = document.querySelector(".nav nav");
+
+if (menuButton && nav) {
+  menuButton.addEventListener("click", () => {
+    nav.classList.toggle("open");
+    menuButton.classList.toggle("active");
+  });
+
+  // Close menu after clicking a navigation link
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      menuButton.classList.remove("active");
+    });
+  });
+}
