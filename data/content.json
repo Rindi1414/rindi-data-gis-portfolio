@@ -1,1 +1,184 @@
-
+{
+  "profile": {
+    "name": "Rindi Tri Setyaningsih",
+    "headline": "Data Analyst × GIS",
+    "intro": "GIS graduate with a strong interest in data analysis, visualization, and geospatial technology. I enjoy turning structured and spatial data into clear, useful insights.",
+    "aboutTitle": "Data-minded. Spatially curious.",
+    "about": "I combine analytical thinking with geospatial skills to solve problems through data. My background in Geographic Information Systems gives me a spatial perspective, while my experience with programming and visualization helps me communicate findings clearly.",
+    "contactText": "Open to opportunities in data analytics, GIS, geospatial analysis, data visualization, and related roles.",
+    "cv": ""
+  },
+  "aboutPoints": [
+    {
+      "title": "Data Analytics",
+      "text": "Data cleaning, SQL, Python, visualization, dashboards, and analytical thinking."
+    },
+    {
+      "title": "GIS & Geospatial",
+      "text": "Spatial analysis, cartography, remote sensing, WebGIS, and geospatial data processing."
+    },
+    {
+      "title": "Problem Solving",
+      "text": "From raw datasets to structured insights and decision-ready outputs."
+    },
+    {
+      "title": "Web & Visualization",
+      "text": "Interactive maps, web-based data presentation, and user-focused dashboards."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Data Analytics",
+      "items": [
+        "Python",
+        "SQL",
+        "Excel",
+        "Tableau",
+        "Looker Studio",
+        "Data Cleaning",
+        "Data Visualization",
+        "Statistical Analysis"
+      ]
+    },
+    {
+      "title": "GIS & Geospatial",
+      "items": [
+        "ArcGIS Pro",
+        "QGIS",
+        "Google Earth Engine",
+        "Spatial Analysis",
+        "WebGIS",
+        "PostGIS",
+        "Remote Sensing",
+        "Geospatial Data"
+      ]
+    },
+    {
+      "title": "Programming & Web",
+      "items": [
+        "JavaScript",
+        "PHP",
+        "Laravel",
+        "Leaflet",
+        "HTML",
+        "CSS",
+        "Git"
+      ]
+    },
+    {
+      "title": "Tools & Workflow",
+      "items": [
+        "Jupyter Notebook",
+        "PostgreSQL",
+        "GeoServer",
+        "Mendeley",
+        "Google Workspace",
+        "GitHub"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "SIPTALA — Landslide Reporting WebGIS",
+      "category": "GIS / WebGIS",
+      "description": "WebGIS for landslide reporting and identification of landslide-prone areas in Karanganyar, integrating spatial data and web mapping.",
+      "tools": [
+        "Laravel",
+        "Leaflet",
+        "PostGIS",
+        "GeoServer"
+      ],
+      "image": "",
+      "link": ""
+    },
+    {
+      "title": "E-commerce Product Recommendation",
+      "category": "Data Analysis",
+      "description": "Hybrid recommendation system project exploring product similarity and user preference signals from an e-commerce dataset.",
+      "tools": [
+        "Python",
+        "Pandas",
+        "Data Analysis",
+        "Machine Learning"
+      ],
+      "image": "",
+      "link": ""
+    },
+    {
+      "title": "Data Visualization Dashboard",
+      "category": "Data Visualization",
+      "description": "Interactive dashboard work focused on transforming datasets into clear visual stories and decision-support views.",
+      "tools": [
+        "Tableau",
+        "Data Visualization",
+        "Dashboard"
+      ],
+      "image": "",
+      "link": ""
+    },
+    {
+      "title": "UMKM Mapping — Sabat Pulau Nasi",
+      "category": "GIS / WebGIS",
+      "description": "Mapping and inventory of local MSMEs with interactive story maps to support community and tourism information.",
+      "tools": [
+        "GIS",
+        "ArcGIS",
+        "Story Map",
+        "Spatial Data"
+      ],
+      "image": "",
+      "link": ""
+    }
+  ],
+  "experience": [
+    {
+      "period": "Add period",
+      "role": "Internship / Field Experience",
+      "organization": "PLN UIP JBT",
+      "description": "Add a concise description of your responsibilities, analysis, mapping, or data-processing work here."
+    },
+    {
+      "period": "2025",
+      "role": "GIS & Community Mapping Project",
+      "organization": "KKN PPM UGM — Sabat Pulau Nasi",
+      "description": "Community-oriented mapping projects including MSME inventory, story maps, tourism information, and disaster mitigation mapping."
+    }
+  ],
+  "education": {
+    "degree": "D4 Sistem Informasi Geografis",
+    "institution": "Sekolah Vokasi, Universitas Gadjah Mada",
+    "period": "SIG 2022",
+    "gpa": "3.46"
+  },
+  "certificates": [
+    {
+      "year": "Add year",
+      "name": "Certificate / Training Title",
+      "issuer": "Issuer / Institution"
+    },
+    {
+      "year": "Add year",
+      "name": "Seminar / Training",
+      "issuer": "Issuer / Institution"
+    },
+    {
+      "year": "Add year",
+      "name": "Course / Certification",
+      "issuer": "Issuer / Institution"
+    }
+  ],
+  "contacts": [
+    {
+      "label": "Email",
+      "url": "mailto:rinditrisetyaningsih@gmail.com"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/rinditrisetyaningsih"
+    },
+    {
+      "label": "Portfolio / Website",
+      "url": "https://sites.google.com/mail.ugm.ac.id/rindiportfolio/about-me"
+    }
+  ]
+}
