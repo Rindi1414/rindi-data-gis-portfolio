@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: Rindi1414/rindi-data-gis-portfolio
+  name: git-gateway
   branch: main
 
 media_folder: "assets/uploads"
