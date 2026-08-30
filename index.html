@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rindi Tri Setyaningsih — Data Analyst & GIS Portfolio">
+  <title>Rindi Tri Setyaningsih | Data Analyst × GIS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span>R</span> Rindi.</a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">DATA ANALYST × GIS</p>
+          <h1>Turning data into <span>insights</span> and spatial information into decisions.</h1>
+          <p class="hero-text" id="hero-intro">Data-focused GIS graduate with an interest in analytics, visualization, and geospatial technology.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore Projects <span>↗</span></a>
+            <a class="btn btn-ghost" id="cv-link" href="#" target="_blank" rel="noopener">Download CV</a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>Data</strong><span>Analysis · SQL · Python</span></div>
+            <div><strong>Spatial</strong><span>GIS · WebGIS · Remote Sensing</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <div class="data-card">
+            <div class="card-top"><span>SPATIAL DATA</span><span class="live-dot"></span></div>
+            <div class="map-placeholder">
+              <div class="grid-lines"></div>
+              <div class="route route-a"></div>
+              <div class="route route-b"></div>
+              <i class="pin pin-a"></i><i class="pin pin-b"></i><i class="pin pin-c"></i>
+            </div>
+            <div class="metrics">
+              <div><small>GIS</small><b>Spatial</b></div>
+              <div><small>DATA</small><b>Insights</b></div>
+              <div><small>WEB</small><b>Solutions</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-light">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">01 — ABOUT</p>
+          <h2 id="about-title">Data-minded. Spatially curious.</h2>
+        </div>
+        <div>
+          <p class="lead" id="about-text">I combine data analysis and geospatial thinking to turn raw information into clear, useful outputs.</p>
+          <div class="about-points" id="about-points"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 — SKILLS</p><h2>What I work with</h2></div>
+          <p>Two complementary skill sets: analytical thinking and spatial problem solving.</p>
+        </div>
+        <div class="skill-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">03 — PROJECTS</p><h2>Selected work</h2></div>
+          <p>Projects across data analysis, visualization, GIS, and WebGIS.</p>
+        </div>
+        <div class="filter-row" id="project-filters"></div>
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">04 — EXPERIENCE</p><h2>Experience</h2></div>
+        </div>
+        <div class="timeline" id="experience-list"></div>
+      </div>
+    </section>
+
+    <section id="education" class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">05 — EDUCATION</p><h2>Education</h2></div>
+        </div>
+        <div class="education-card" id="education-card"></div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">06 — CERTIFICATES</p><h2>Certificates & training</h2></div>
+          <p>Credentials, seminars, courses, and professional development.</p>
+        </div>
+        <div class="certificate-grid" id="certificate-grid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">07 — CONTACT</p>
+          <h2>Let's work with data.</h2>
+          <p id="contact-text">Open to opportunities in data analytics, GIS, geospatial analysis, and related roles.</p>
+        </div>
+        <div class="contact-links" id="contact-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Rindi Tri Setyaningsih</span>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
