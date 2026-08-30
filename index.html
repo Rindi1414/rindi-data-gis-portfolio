@@ -21,13 +21,15 @@
     </span>
   </a>
 
-  <button class="menu">☰</button>
+  <button class="menu" type="button" aria-label="Open navigation menu">☰</button>
 
   <nav>
+    <a href="#home">HOME</a>
     <a href="#about">ABOUT</a>
     <a href="#skills">SKILLS</a>
     <a href="#projects">PROJECTS</a>
     <a href="#experience">EXPERIENCE</a>
+    <a href="#organizations">ORGANIZATION</a>
     <a href="#education">EDUCATION</a>
     <a href="#contact">CONTACT</a>
   </nav>
@@ -36,6 +38,10 @@
 </header>
 
 <main>
+
+<!-- =========================
+     HOME
+========================= -->
 
 <section id="home" class="hero section">
 
@@ -106,6 +112,10 @@
 </section>
 
 
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section id="about" class="section">
 
   <div class="head">
@@ -151,6 +161,10 @@
 </section>
 
 
+<!-- =========================
+     SKILLS
+========================= -->
+
 <section id="skills" class="section">
 
   <div class="head">
@@ -161,6 +175,10 @@
 
 </section>
 
+
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section id="projects" class="section">
 
@@ -173,6 +191,10 @@
 </section>
 
 
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
 <section id="experience" class="section">
 
   <div class="head">
@@ -184,12 +206,31 @@
 </section>
 
 
+<!-- =========================
+     ORGANIZATION & VOLUNTEER
+========================= -->
+
+<section id="organizations" class="section">
+
+  <div class="head">
+    05　ORGANIZATION & VOLUNTEER
+  </div>
+
+  <div id="organizationsGrid" class="organization-grid"></div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION & CERTIFICATES
+========================= -->
+
 <section id="education" class="section lower">
 
   <div>
 
     <div class="head">
-      05　EDUCATION
+      06　EDUCATION
     </div>
 
     <div id="educationCard" class="card"></div>
@@ -200,7 +241,7 @@
   <div>
 
     <div class="head">
-      06　CERTIFICATES & TRAINING
+      07　CERTIFICATES & TRAINING
     </div>
 
     <div id="certGrid" class="certs"></div>
@@ -210,10 +251,14 @@
 </section>
 
 
+<!-- =========================
+     TOOLS
+========================= -->
+
 <section class="section">
 
   <div class="head">
-    07　TOOLS I USE
+    08　TOOLS I USE
   </div>
 
   <div id="tools" class="tools"></div>
@@ -221,10 +266,14 @@
 </section>
 
 
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section id="contact" class="section contact">
 
   <div class="head">
-    08　CONTACT
+    09　CONTACT
   </div>
 
   <div class="contact-grid">
@@ -240,7 +289,7 @@
         <em>TOGETHER.</em>
       </h2>
 
-      <p>
+      <p id="contactText">
         I’m open to opportunities in Data Analytics,
         GIS, geospatial analysis, data visualization,
         and related roles.
