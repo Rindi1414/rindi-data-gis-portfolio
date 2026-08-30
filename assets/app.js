@@ -1,74 +1,503 @@
-const state = { data: null, filter: "All" };
+const DATA_URL = "data/content.json";
 
-async function loadData(){
-  try{
-    const res = await fetch("data/content.json", {cache:"no-store"});
-    if(!res.ok) throw new Error("Could not load content.json");
-    state.data = await res.json();
-    render();
-  }catch(err){
-    console.error(err);
-    document.body.insertAdjacentHTML("beforeend",
-      '<div style="position:fixed;bottom:15px;left:15px;right:15px;background:#8b2c2c;color:white;padding:12px;border-radius:10px;z-index:99">Content could not be loaded. Make sure data/content.json exists.</div>');
+async function loadPortfolio() {
+  try {
+    const response = await fetch(DATA_URL);
+
+    if (!response.ok) {
+      throw new Error("Failed to load portfolio data");
+    }
+
+    const data = await response.json();
+
+    renderProfile(data);
+    renderAbout(data);
+    renderSkills(data);
+    renderProjects(data);
+    renderExperience(data);
+    renderEducation(data);
+    renderCertificates(data);
+    renderTools(data);
+    renderContacts(data);
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  } catch (error) {
+    console.error("Portfolio loading error:", error);
   }
 }
 
-function render(){
-  const d = state.data;
-  document.title = `${d.profile.name} | ${d.profile.headline}`;
-  document.getElementById("hero-intro").textContent = d.profile.intro;
-  document.getElementById("about-title").textContent = d.profile.aboutTitle;
-  document.getElementById("about-text").textContent = d.profile.about;
-  document.getElementById("contact-text").textContent = d.profile.contactText;
-  document.getElementById("cv-link").href = d.profile.cv || "#";
 
-  document.getElementById("about-points").innerHTML = (d.aboutPoints || []).map(x =>
-    `<div class="about-point"><strong>${escapeHtml(x.title)}</strong><span>${escapeHtml(x.text)}</span></div>`).join("");
+/* =========================
+   PROFILE
+========================= */
 
-  document.getElementById("skills-grid").innerHTML = (d.skills || []).map(x =>
-    `<article class="skill-card"><h3>${escapeHtml(x.title)}</h3><div class="skill-tags">${(x.items||[]).map(s=>`<span class="skill-tag">${escapeHtml(s)}</span>`).join("")}</div></article>`).join("");
+function renderProfile(data) {
+  const profile = data.profile || {};
 
-  const categories = ["All", ...new Set((d.projects||[]).map(p=>p.category).filter(Boolean))];
-  document.getElementById("project-filters").innerHTML = categories.map(c =>
-    `<button class="filter-btn ${c===state.filter?"active":""}" data-filter="${escapeAttr(c)}">${escapeHtml(c)}</button>`).join("");
-  document.querySelectorAll(".filter-btn").forEach(btn => btn.addEventListener("click", ()=>{
-    state.filter = btn.dataset.filter; renderProjects();
-    document.querySelectorAll(".filter-btn").forEach(b=>b.classList.toggle("active",b.dataset.filter===state.filter));
-  }));
-  renderProjects();
+  const intro = document.getElementById("intro");
 
-  document.getElementById("experience-list").innerHTML = (d.experience||[]).map(x =>
-    `<div class="timeline-item"><span class="date">${escapeHtml(x.period)}</span><h3>${escapeHtml(x.role)}</h3><strong>${escapeHtml(x.organization)}</strong><p>${escapeHtml(x.description)}</p></div>`).join("");
+  if (intro && profile.intro) {
+    intro.textContent = profile.intro;
+  }
 
-  const e = d.education;
-  document.getElementById("education-card").innerHTML = `<div><p class="eyebrow">DEGREE</p><h3>${escapeHtml(e.degree)}</h3><p>${escapeHtml(e.institution)}</p><p>${escapeHtml(e.period)}</p></div><div class="gpa">GPA ${escapeHtml(e.gpa)}</div>`;
+  const cv = document.getElementById("cv");
 
-  document.getElementById("certificate-grid").innerHTML = (d.certificates||[]).map(x =>
-    `<article class="certificate-card"><span class="cert-year">${escapeHtml(x.year)}</span><h3>${escapeHtml(x.name)}</h3><p>${escapeHtml(x.issuer)}</p></article>`).join("");
+  if (cv && profile.cv) {
+    cv.href = profile.cv;
+    cv.target = "_blank";
+  }
 
-  document.getElementById("contact-links").innerHTML = (d.contacts||[]).map(x =>
-    `<a href="${escapeAttr(x.url)}" target="_blank" rel="noopener">${escapeHtml(x.label)} ↗</a>`).join("");
+  const socials = document.getElementById("socials");
 
-  document.getElementById("year").textContent = new Date().getFullYear();
+  if (socials && Array.isArray(data.contacts)) {
+    socials.innerHTML = data.contacts
+      .filter(item =>
+        ["LinkedIn", "GitHub"].includes(item.label)
+      )
+      .map(item => `
+        <a href="${item.url}" target="_blank">
+          ${item.label}
+        </a>
+      `)
+      .join("");
+  }
 }
 
-function renderProjects(){
-  const projects = (state.data.projects||[]).filter(p => state.filter==="All" || p.category===state.filter);
-  document.getElementById("project-grid").innerHTML = projects.map(p => `
-    <article class="project-card">
-      <div class="project-image">${p.image ? `<img src="${escapeAttr(p.image)}" alt="${escapeAttr(p.title)}">` : `<div class="placeholder">01</div>`}</div>
-      <div class="project-body">
-        <div class="project-top"><span class="category">${escapeHtml(p.category)}</span><span>↗</span></div>
-        <h3>${escapeHtml(p.title)}</h3>
-        <p>${escapeHtml(p.description)}</p>
-        <div class="tech-list">${(p.tools||[]).map(t=>`<span class="tech">${escapeHtml(t)}</span>`).join("")}</div>
-        ${p.link ? `<a class="project-link" href="${escapeAttr(p.link)}" target="_blank" rel="noopener">View project →</a>` : ""}
+
+/* =========================
+   ABOUT
+========================= */
+
+function renderAbout(data) {
+
+  const profile = data.profile || {};
+
+  const aboutText = document.getElementById("aboutText");
+
+  if (aboutText) {
+    aboutText.textContent =
+      profile.about ||
+      profile.intro ||
+      "";
+  }
+
+
+  const container =
+    document.getElementById("aboutPoints");
+
+  if (!container) return;
+
+  const points =
+    data.about_points ||
+    data.aboutPoints ||
+    [];
+
+  container.innerHTML =
+    points.map((item, index) => `
+      <article>
+        <span>0${index + 1}</span>
+
+        <h3>
+          ${item.title || ""}
+        </h3>
+
+        <p>
+          ${item.description || item.text || ""}
+        </p>
+      </article>
+    `).join("");
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+function renderSkills(data) {
+
+  const container =
+    document.getElementById("skillsGrid");
+
+  if (!container) return;
+
+  const skills =
+    data.skills ||
+    [];
+
+  const icons = [
+    "⌁",
+    "⌖",
+    "〈〉",
+    "◫"
+  ];
+
+  container.innerHTML =
+    skills.map((skill, index) => {
+
+      const items =
+        skill.items ||
+        skill.tools ||
+        skill.description ||
+        [];
+
+      let list = "";
+
+      if (Array.isArray(items)) {
+
+        list = items.map(item => `
+          <li>${item}</li>
+        `).join("");
+
+      } else {
+
+        list = `
+          <li>${items}</li>
+        `;
+      }
+
+      return `
+        <article class="skill">
+
+          <div class="icon">
+            ${icons[index % icons.length]}
+          </div>
+
+          <h3>
+            ${skill.title || skill.name || ""}
+          </h3>
+
+          <ul>
+            ${list}
+          </ul>
+
+        </article>
+      `;
+
+    }).join("");
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+function renderProjects(data) {
+
+  const container =
+    document.getElementById("projectsGrid");
+
+  if (!container) return;
+
+  const projects =
+    data.projects ||
+    [];
+
+  container.innerHTML =
+    projects.map((project, index) => {
+
+      const image =
+        project.image ||
+        project.thumbnail ||
+        "";
+
+      const tools =
+        project.tools ||
+        project.technologies ||
+        [];
+
+      return `
+        <article class="project">
+
+          <div class="project-img">
+
+            ${
+              image
+                ? `<img src="${image}" alt="${project.title || ""}">`
+                : ""
+            }
+
+            <span class="num">
+              ${String(index + 1).padStart(2, "0")}
+            </span>
+
+          </div>
+
+          <div class="project-body">
+
+            <span class="tag">
+              ${project.category || "PROJECT"}
+            </span>
+
+            <h3>
+              ${project.title || ""}
+            </h3>
+
+            <p>
+              ${project.description || ""}
+            </p>
+
+            <div class="chips">
+
+              ${
+                Array.isArray(tools)
+                  ? tools.map(tool =>
+                      `<span class="chip">${tool}</span>`
+                    ).join("")
+                  : ""
+              }
+
+            </div>
+
+          </div>
+
+        </article>
+      `;
+
+    }).join("");
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+function renderExperience(data) {
+
+  const container =
+    document.getElementById("experienceGrid");
+
+  if (!container) return;
+
+  const experiences =
+    data.experience ||
+    data.experiences ||
+    [];
+
+  container.innerHTML =
+    experiences.map(item => `
+
+      <article>
+
+        <span class="period">
+          ${item.period || ""}
+        </span>
+
+        <h3>
+          ${item.role || item.title || ""}
+        </h3>
+
+        <span class="org">
+          ${item.organization || item.company || ""}
+        </span>
+
+        <p>
+          ${item.description || ""}
+        </p>
+
+      </article>
+
+    `).join("");
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+function renderEducation(data) {
+
+  const container =
+    document.getElementById("educationCard");
+
+  if (!container) return;
+
+  const education =
+    data.education ||
+    {};
+
+  container.innerHTML = `
+
+    <h3>
+      ${education.degree || ""}
+    </h3>
+
+    <p>
+      ${education.institution || ""}
+    </p>
+
+    ${
+      education.period
+        ? `<p>${education.period}</p>`
+        : ""
+    }
+
+    ${
+      education.gpa
+        ? `<p>GPA: ${education.gpa}</p>`
+        : ""
+    }
+
+  `;
+}
+
+
+/* =========================
+   CERTIFICATES
+========================= */
+
+function renderCertificates(data) {
+
+  const container =
+    document.getElementById("certGrid");
+
+  if (!container) return;
+
+  const certificates =
+    data.certificates ||
+    data.certificate ||
+    [];
+
+  container.innerHTML =
+    certificates.map(item => `
+
+      <article class="cert">
+
+        <b>
+          ${item.title || item.name || ""}
+        </b>
+
+        <span>
+          ${item.issuer || ""}
+          ${
+            item.year
+              ? ` · ${item.year}`
+              : ""
+          }
+        </span>
+
+      </article>
+
+    `).join("");
+}
+
+
+/* =========================
+   TOOLS
+========================= */
+
+function renderTools(data) {
+
+  const container =
+    document.getElementById("tools");
+
+  if (!container) return;
+
+  let tools =
+    data.tools ||
+    [];
+
+  if (!Array.isArray(tools)) {
+    tools = Object.values(tools);
+  }
+
+  container.innerHTML =
+    tools.map(tool => `
+
+      <span class="tool">
+        ${typeof tool === "string"
+          ? tool
+          : tool.name || ""}
+      </span>
+
+    `).join("");
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+function renderContacts(data) {
+
+  const container =
+    document.getElementById("contacts");
+
+  const email =
+    document.getElementById("email");
+
+  const contacts =
+    data.contacts ||
+    [];
+
+  if (email) {
+
+    const emailItem =
+      contacts.find(item =>
+        item.label === "Email"
+      );
+
+    if (emailItem) {
+      email.href = emailItem.url;
+    }
+  }
+
+
+  if (!container) return;
+
+  container.innerHTML =
+    contacts.map(item => `
+
+      <div class="contact-row">
+
+        <span>
+          ${item.label || ""}
+        </span>
+
+        <a
+          href="${item.url || "#"}"
+          target="_blank"
+        >
+          ${
+            item.display ||
+            item.value ||
+            item.label ||
+            ""
+          }
+        </a>
+
       </div>
-    </article>`).join("");
+
+    `).join("");
 }
 
-function escapeHtml(v=""){return String(v).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-function escapeAttr(v=""){return escapeHtml(v)}
-document.querySelector(".menu-toggle").addEventListener("click",()=>document.querySelector(".nav").classList.toggle("open"));
-document.querySelectorAll(".nav a").forEach(a=>a.addEventListener("click",()=>document.querySelector(".nav").classList.remove("open")));
-loadData();
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuButton =
+  document.querySelector(".menu");
+
+const nav =
+  document.querySelector(".nav nav");
+
+if (menuButton && nav) {
+
+  menuButton.addEventListener(
+    "click",
+    () => {
+
+      nav.classList.toggle("open");
+
+    }
+  );
+}
+
+
+/* =========================
+   START
+========================= */
+
+loadPortfolio();
