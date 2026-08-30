@@ -16,12 +16,16 @@ async function loadPortfolio() {
     renderProjects(data);
     renderExperience(data);
     renderEducation(data);
+    renderOrganizations(data);
     renderCertificates(data);
     renderTools(data);
     renderContacts(data);
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    const year = document.getElementById("year");
+
+    if (year) {
+      year.textContent = new Date().getFullYear();
+    }
 
   } catch (error) {
     console.error("Portfolio loading error:", error);
@@ -38,8 +42,8 @@ function renderProfile(data) {
 
   const intro = document.getElementById("intro");
 
-  if (intro && profile.intro) {
-    intro.textContent = profile.intro;
+  if (intro) {
+    intro.textContent = profile.intro || "";
   }
 
   const cv = document.getElementById("cv");
@@ -52,13 +56,18 @@ function renderProfile(data) {
   const socials = document.getElementById("socials");
 
   if (socials && Array.isArray(data.contacts)) {
+
     socials.innerHTML = data.contacts
       .filter(item =>
         ["LinkedIn", "GitHub"].includes(item.label)
       )
       .map(item => `
-        <a href="${item.url}" target="_blank">
-          ${item.label}
+        <a
+          href="${item.url || "#"}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ${item.label || ""}
         </a>
       `)
       .join("");
@@ -74,7 +83,8 @@ function renderAbout(data) {
 
   const profile = data.profile || {};
 
-  const aboutText = document.getElementById("aboutText");
+  const aboutText =
+    document.getElementById("aboutText");
 
   if (aboutText) {
     aboutText.textContent =
@@ -82,7 +92,6 @@ function renderAbout(data) {
       profile.intro ||
       "";
   }
-
 
   const container =
     document.getElementById("aboutPoints");
@@ -97,7 +106,10 @@ function renderAbout(data) {
   container.innerHTML =
     points.map((item, index) => `
       <article>
-        <span>0${index + 1}</span>
+
+        <span>
+          ${String(index + 1).padStart(2, "0")}
+        </span>
 
         <h3>
           ${item.title || ""}
@@ -106,6 +118,7 @@ function renderAbout(data) {
         <p>
           ${item.description || item.text || ""}
         </p>
+
       </article>
     `).join("");
 }
@@ -123,8 +136,7 @@ function renderSkills(data) {
   if (!container) return;
 
   const skills =
-    data.skills ||
-    [];
+    data.skills || [];
 
   const icons = [
     "⌁",
@@ -191,8 +203,7 @@ function renderProjects(data) {
   if (!container) return;
 
   const projects =
-    data.projects ||
-    [];
+    data.projects || [];
 
   container.innerHTML =
     projects.map((project, index) => {
@@ -214,8 +225,18 @@ function renderProjects(data) {
 
             ${
               image
-                ? `<img src="${image}" alt="${project.title || ""}">`
-                : ""
+                ? `
+                  <img
+                    src="${image}"
+                    alt="${project.title || "Project image"}"
+                    loading="lazy"
+                  >
+                `
+                : `
+                  <div class="project-placeholder">
+                    PROJECT
+                  </div>
+                `
             }
 
             <span class="num">
@@ -242,13 +263,30 @@ function renderProjects(data) {
 
               ${
                 Array.isArray(tools)
-                  ? tools.map(tool =>
-                      `<span class="chip">${tool}</span>`
-                    ).join("")
+                  ? tools.map(tool => `
+                      <span class="chip">
+                        ${tool}
+                      </span>
+                    `).join("")
                   : ""
               }
 
             </div>
+
+            ${
+              project.link
+                ? `
+                  <a
+                    class="project-link"
+                    href="${project.link}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    VIEW PROJECT ↗
+                  </a>
+                `
+                : ""
+            }
 
           </div>
 
@@ -314,8 +352,7 @@ function renderEducation(data) {
   if (!container) return;
 
   const education =
-    data.education ||
-    {};
+    data.education || {};
 
   container.innerHTML = `
 
@@ -340,6 +377,104 @@ function renderEducation(data) {
     }
 
   `;
+}
+
+
+/* =========================
+   ORGANIZATION & VOLUNTEER
+========================= */
+
+function renderOrganizations(data) {
+
+  const container =
+    document.getElementById("organizationsGrid");
+
+  if (!container) return;
+
+  const organizations =
+    data.organizations ||
+    data.organization ||
+    data.volunteers ||
+    [];
+
+  if (!Array.isArray(organizations) ||
+      organizations.length === 0) {
+
+    container.innerHTML = "";
+    return;
+  }
+
+  container.innerHTML =
+    organizations.map((item, index) => {
+
+      const photos =
+        Array.isArray(item.photos)
+          ? item.photos
+          : [];
+
+      const photoGallery =
+        photos.length > 0
+          ? `
+            <div class="organization-gallery">
+
+              ${photos.map(photo => {
+
+                const image =
+                  typeof photo === "string"
+                    ? photo
+                    : photo.image || "";
+
+                if (!image) return "";
+
+                return `
+                  <div class="organization-photo">
+                    <img
+                      src="${image}"
+                      alt="${item.organization || "Organization photo"}"
+                      loading="lazy"
+                    >
+                  </div>
+                `;
+
+              }).join("")}
+
+            </div>
+          `
+          : "";
+
+      return `
+        <article class="organization">
+
+          <div class="organization-number">
+            ${String(index + 1).padStart(2, "0")}
+          </div>
+
+          <div class="organization-content">
+
+            <span class="period">
+              ${item.period || ""}
+            </span>
+
+            <h3>
+              ${item.role || ""}
+            </h3>
+
+            <span class="org">
+              ${item.organization || ""}
+            </span>
+
+            <p>
+              ${item.description || ""}
+            </p>
+
+            ${photoGallery}
+
+          </div>
+
+        </article>
+      `;
+
+    }).join("");
 }
 
 
@@ -395,8 +530,7 @@ function renderTools(data) {
   if (!container) return;
 
   let tools =
-    data.tools ||
-    [];
+    data.tools || [];
 
   if (!Array.isArray(tools)) {
     tools = Object.values(tools);
@@ -406,9 +540,11 @@ function renderTools(data) {
     tools.map(tool => `
 
       <span class="tool">
-        ${typeof tool === "string"
-          ? tool
-          : tool.name || ""}
+        ${
+          typeof tool === "string"
+            ? tool
+            : tool.name || ""
+        }
       </span>
 
     `).join("");
@@ -428,8 +564,7 @@ function renderContacts(data) {
     document.getElementById("email");
 
   const contacts =
-    data.contacts ||
-    [];
+    data.contacts || [];
 
   if (email) {
 
@@ -442,7 +577,6 @@ function renderContacts(data) {
       email.href = emailItem.url;
     }
   }
-
 
   if (!container) return;
 
@@ -458,10 +592,12 @@ function renderContacts(data) {
         <a
           href="${item.url || "#"}"
           target="_blank"
+          rel="noopener noreferrer"
         >
           ${
             item.display ||
             item.value ||
+            item.url ||
             item.label ||
             ""
           }
@@ -477,22 +613,35 @@ function renderContacts(data) {
    MOBILE MENU
 ========================= */
 
-const menuButton =
-  document.querySelector(".menu");
+function initMobileMenu() {
 
-const nav =
-  document.querySelector(".nav nav");
+  const menuButton =
+    document.querySelector(".menu");
 
-if (menuButton && nav) {
+  const nav =
+    document.querySelector(".nav nav");
 
-  menuButton.addEventListener(
-    "click",
-    () => {
+  if (!menuButton || !nav) return;
 
-      nav.classList.toggle("open");
+  menuButton.addEventListener("click", () => {
 
-    }
-  );
+    nav.classList.toggle("open");
+    menuButton.classList.toggle("active");
+
+  });
+
+
+  nav.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      nav.classList.remove("open");
+      menuButton.classList.remove("active");
+
+    });
+
+  });
+
 }
 
 
@@ -500,26 +649,9 @@ if (menuButton && nav) {
    START
 ========================= */
 
-loadPortfolio();
+document.addEventListener("DOMContentLoaded", () => {
 
-// ================================
-// MOBILE MENU
-// ================================
+  initMobileMenu();
+  loadPortfolio();
 
-const menuButton = document.querySelector(".menu");
-const nav = document.querySelector(".nav nav");
-
-if (menuButton && nav) {
-  menuButton.addEventListener("click", () => {
-    nav.classList.toggle("open");
-    menuButton.classList.toggle("active");
-  });
-
-  // Close menu after clicking a navigation link
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("open");
-      menuButton.classList.remove("active");
-    });
-  });
-}
+});
