@@ -52,7 +52,7 @@ collections:
               - {label: "Project Image", name: "image", widget: "image", required: false}
               - {label: "Project Link", name: "link", widget: "string", required: false}
 
-          - label: "Experience"
+            - label: "Experience"
             name: "experience"
             widget: "list"
             fields:
@@ -60,6 +60,13 @@ collections:
               - {label: "Role", name: "role", widget: "string"}
               - {label: "Organization", name: "organization", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
+
+              - label: "Photos"
+                name: "photos"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Image", name: "image", widget: "image"}
 
           - label: "Education"
             name: "education"
