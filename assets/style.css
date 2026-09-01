@@ -1175,3 +1175,61 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   ORGANIZATION & VOLUNTEER
+   PHOTO GALLERY
+========================= */
+
+.organization-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 520px;
+}
+
+.organization-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid #3ec6da33;
+  background: #061117;
+  border-radius: 3px;
+}
+
+.organization-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.organization-photo:hover img {
+  transform: scale(1.04);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .organization-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 450px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .organization-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    gap: 8px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+  .organization-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
