@@ -89,7 +89,7 @@
   "experience": [
     {
       "period": "Sept – Dec 2025",
-      "role": "Data & Geospatial Analyst Intern — PT PLN (Persero) UIP JBT",
+      "role": "Data & Geospatial Analyst Intern ",
       "organization": "PT PLN Persero",
       "description": "Developed an interactive GIS platform using Laravel, OpenLayers, and Leaflet with 19 dynamic tools to monitor RUPTL 2025–2034 project data; processed photogrammetry data using DJI M350 RTK, Agisoft Metashape, and ArcGIS across 10+ sites, producing 3D models and DEMs with GCP precision of ±0.002–0.01 m; applied SRGI geoid undulation data to convert ellipsoidal heights to MSL for land feasibility analysis.",
       "photos": [
@@ -104,6 +104,20 @@
         },
         {
           "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.05.00-1-.jpeg"
+        }
+      ]
+    },
+    {
+      "period": "Feb – Jun 2025",
+      "role": "Data Analyst Intern  ",
+      "description": "Supported RDTR compliance for Kecamatan Patean based on Permen ATR No. 14/2021 through field surveys covering land use, transportation networks, and evacuation points; performed GIS topology corrections using QGIS and ArcGIS to eliminate spatial overlaps and gaps of <0.0025 ha, and presented validated spatial updates to project mentors.",
+      "organization": "Dinas Pekerjaan Umum dan Penataan Ruang",
+      "photos": [
+        {
+          "image": "/assets/uploads/screenshot-2026-09-01-151849.png"
+        },
+        {
+          "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.05.02.jpeg"
         }
       ]
     }
