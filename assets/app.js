@@ -301,6 +301,10 @@ function renderProjects(data) {
    EXPERIENCE
 ========================= */
 
+/* =========================
+   EXPERIENCE
+========================= */
+
 function renderExperience(data) {
 
   const container =
@@ -314,29 +318,68 @@ function renderExperience(data) {
     [];
 
   container.innerHTML =
-    experiences.map(item => `
+    experiences.map((item, index) => {
 
-      <article>
+      const photos =
+        Array.isArray(item.photos)
+          ? item.photos
+          : [];
 
-        <span class="period">
-          ${item.period || ""}
-        </span>
+      const photoGallery =
+        photos.length > 0
+          ? `
+            <div class="experience-gallery">
 
-        <h3>
-          ${item.role || item.title || ""}
-        </h3>
+              ${photos.map(photo => {
 
-        <span class="org">
-          ${item.organization || item.company || ""}
-        </span>
+                const image =
+                  typeof photo === "string"
+                    ? photo
+                    : photo.image || "";
 
-        <p>
-          ${item.description || ""}
-        </p>
+                if (!image) return "";
 
-      </article>
+                return `
+                  <div class="experience-photo">
+                    <img
+                      src="${image}"
+                      alt="${item.organization || "Experience photo"}"
+                      loading="lazy"
+                    >
+                  </div>
+                `;
 
-    `).join("");
+              }).join("")}
+
+            </div>
+          `
+          : "";
+
+      return `
+        <article class="experience-item">
+
+          <span class="period">
+            ${item.period || ""}
+          </span>
+
+          <h3>
+            ${item.role || item.title || ""}
+          </h3>
+
+          <span class="org">
+            ${item.organization || item.company || ""}
+          </span>
+
+          <p>
+            ${item.description || ""}
+          </p>
+
+          ${photoGallery}
+
+        </article>
+      `;
+
+    }).join("");
 }
 
 
