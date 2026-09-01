@@ -1,9 +1,5 @@
 {
-  "organizations": [
-    {
-      "photos": []
-    }
-  ],
+  "organizations": [],
   "skills": [
     {
       "title": "Data Analytics",
@@ -92,16 +88,24 @@
   },
   "experience": [
     {
-      "period": "Add period",
-      "role": "Internship / Field Experience",
-      "organization": "PLN UIP JBT",
-      "description": "Add a concise description of your responsibilities, analysis, mapping, or data-processing work here."
-    },
-    {
-      "period": "2025",
-      "role": "GIS & Community Mapping Project",
-      "organization": "KKN PPM UGM — Sabat Pulau Nasi",
-      "description": "Community-oriented mapping projects including MSME inventory, story maps, tourism information, and disaster mitigation mapping."
+      "period": "Sept – Dec 2025",
+      "role": "Data & Geospatial Analyst Intern — PT PLN (Persero) UIP JBT",
+      "organization": "PT PLN Persero",
+      "description": "Developed an interactive GIS platform using Laravel, OpenLayers, and Leaflet with 19 dynamic tools to monitor RUPTL 2025–2034 project data; processed photogrammetry data using DJI M350 RTK, Agisoft Metashape, and ArcGIS across 10+ sites, producing 3D models and DEMs with GCP precision of ±0.002–0.01 m; applied SRGI geoid undulation data to convert ellipsoidal heights to MSL for land feasibility analysis.",
+      "photos": [
+        {
+          "image": "/assets/uploads/screenshot-2026-09-01-150544.png"
+        },
+        {
+          "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.05.00.jpeg"
+        },
+        {
+          "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.07.05.jpeg"
+        },
+        {
+          "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.05.00-1-.jpeg"
+        }
+      ]
     }
   ],
   "aboutPoints": [
