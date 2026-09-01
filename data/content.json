@@ -1,5 +1,46 @@
 {
-  "organizations": [],
+  "organizations": [
+    {
+      "role": "Events and Campaign Commissioner",
+      "period": "Oct - Nov 2023",
+      "organization": "DPM KM SV UGM",
+      "description": "The election of the BEM KM School of Vocational Studies chairperson is one of the main programs of DPM KM SV. As a commissioner for the event and campaign, I was involved in the coordination and organization of the debate event for the Student Council (BEM) chair candidates, as well as managing the campaign flow for each candidate. I also coordinated the opening of the Pemilwa socialization, the oath-taking ceremony for members, the campaign speeches of each BEM chair candidate, and the coordination of the peace declaration for the candidates.",
+      "photos": [
+        {
+          "image": "/assets/uploads/1736491992718.jpg"
+        },
+        {
+          "image": "/assets/uploads/1736491973372.jpg"
+        },
+        {
+          "image": "/assets/uploads/1736491926067.jpg"
+        }
+      ]
+    },
+    {
+      "role": "Co - Facilitator",
+      "organization": "PPSMB Permadani ",
+      "period": "Apr - Aug 2023",
+      "description": "As a co-facilitator for PPSMB Pionir Permadani, my role involved delivering materials in a creative and engaging manner to ensure an interactive and memorable learning experience. I also acted as a close companion and role model for the new students (Gamada), offering guidance and support throughout the process. Additionally, I was responsible for conducting assessments to evaluate the progress and engagement of Gamada, ensuring their successful integration into the academic community.",
+      "photos": [
+        {
+          "image": "/assets/uploads/1741951597543.jpg"
+        },
+        {
+          "image": "/assets/uploads/1736492541924.jpg"
+        },
+        {
+          "image": "/assets/uploads/1736492476340.jpg"
+        },
+        {
+          "image": "/assets/uploads/1736492452770.jpg"
+        },
+        {
+          "image": "/assets/uploads/1736492347011.jpg"
+        }
+      ]
+    }
+  ],
   "skills": [
     {
       "title": "Data Analytics",
