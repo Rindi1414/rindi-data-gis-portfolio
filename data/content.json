@@ -220,6 +220,87 @@
         "3D Geospatial Analysis"
       ],
       "image": "/assets/uploads/screenshot-2026-09-01-114325.png"
+    },
+    {
+      "title": "Advanced Geospatial Data Science",
+      "category": "Data Analysis",
+      "description": "A collection of advanced geospatial data science projects covering unstructured data processing, geovisualization, remote sensing, terrain analysis, machine learning, and deep learning. The projects include object detection, semantic and instance segmentation, DEM analysis, spectral indices, and forest and land fire probability mapping.",
+      "tools": [
+        "Python",
+        "R Studio",
+        "Machine Learning",
+        "Deep Learning",
+        "Random Forest",
+        "Remote Sensing",
+        "DEM",
+        "Geospatial Analysis",
+        "Google Maps Data"
+      ],
+      "image": "/assets/uploads/screenshot-2026-09-01-115913.png"
+    },
+    {
+      "title": "Coastal & Marine Geospatial Analysis",
+      "category": "Remote Sensing",
+      "description": "A collection of coastal and marine geospatial analysis projects covering benthic habitat classification, bathymetry, chlorophyll-a concentration, pelagic fish catch potential, sea surface temperature, salinity, wave formation, subsurface currents, and wave-current interactions.",
+      "tools": [
+        "Google Earth Engine",
+        "Ocean Data View",
+        "GIS",
+        "Remote Sensing",
+        "Spatial Analysis",
+        "Marine Data Analysis"
+      ],
+      "image": "/assets/uploads/screenshot-2026-09-01-115839.png"
+    },
+    {
+      "title": "Water Resources & Groundwater Analysis",
+      "category": "Other",
+      "description": "A collection of geospatial analysis projects focused on water resources and groundwater, including watershed delineation, terrain analysis, river order classification, rainfall interpolation, water turbidity mapping, groundwater interpolation, groundwater flow direction, and groundwater depth accuracy assessment.",
+      "tools": [
+        "ArcGIS",
+        "QGIS",
+        "Google Earth Engine",
+        "IDW",
+        "Interpolation",
+        "Spatial Analysis",
+        "DEM",
+        "Hydrological Analysis"
+      ],
+      "image": "/assets/uploads/screenshot-2026-09-01-120106.png"
+    },
+    {
+      "title": "Customer Behavior Dashboard — Power BI",
+      "category": "Data Visualization",
+      "description": "An interactive Power BI dashboard designed to analyze customer purchasing behavior, subscription status, demographics, product categories, revenue, shipping preferences, and customer review ratings. The dashboard provides an overview of customer segments and sales patterns to support data-driven business insights.",
+      "tools": [
+        "Power BI",
+        "Data Visualization",
+        "Data Analysis",
+        "Dashboard",
+        "Design",
+        "Customer Analytics",
+        "Business Intelligence",
+        "Python",
+        "SQL"
+      ],
+      "image": "/assets/uploads/screenshot-2026-09-01-121140.png"
+    },
+    {
+      "title": "HR Attrition Analysis Dashboard — Power BI",
+      "category": "Data Visualization",
+      "description": "An interactive HR analytics dashboard developed in Power BI to analyze employee attrition patterns. The dashboard explores attrition rates across departments and job roles, along with employee demographics, monthly income, tenure, overtime, and other workforce characteristics to identify potential factors associated with employee turnover.",
+      "tools": [
+        "Power BI",
+        "Data Visualization",
+        "Data Analysis",
+        "Dashboard",
+        "Design",
+        "Customer Analytics",
+        "Business Intelligence",
+        "Python",
+        "SQL"
+      ],
+      "image": "/assets/uploads/screenshot-2026-09-01-121241.png"
     }
   ],
   "certificates": [
