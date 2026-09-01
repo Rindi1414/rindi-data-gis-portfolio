@@ -1133,3 +1133,45 @@ footer {
     transform: rotate(90deg);
   }
 }
+
+/* =========================
+   EXPERIENCE PHOTO GALLERY
+========================= */
+
+.experience-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.experience-photo {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #f3f3f3;
+}
+
+.experience-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.experience-photo:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .experience-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .experience-gallery {
+    grid-template-columns: 1fr;
+  }
+}
