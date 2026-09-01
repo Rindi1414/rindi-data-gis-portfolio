@@ -32,48 +32,68 @@
       "items": [
         "Python",
         "SQL",
+        "R Studio",
         "Excel",
         "Tableau",
         "Looker Studio",
         "Data Cleaning",
         "Data Visualization",
-        "Statistical Analysis"
+        "Statistical Analysis",
+        "PowerBI",
+        "IBM SPSS",
+        "Jupyter"
       ]
     },
     {
       "title": "GIS & Geospatial",
       "items": [
+        "ArcMap",
         "ArcGIS Pro",
         "QGIS",
+        "ENVI",
+        "Global Mapper",
         "Google Earth Engine",
-        "Spatial Analysis",
-        "WebGIS",
-        "PostGIS",
-        "Remote Sensing",
-        "Geospatial Data"
+        "GeoDa",
+        "Geomatica 2015",
+        "Drone Mapping",
+        "Photo Modeler",
+        "GeoServer",
+        "DroneDeploy",
+        "SeaDAS",
+        "AutoCAD",
+        "Emlid Studio",
+        "RINEX",
+        "Agisoft Metashape",
+        "Ocean Data View"
       ]
     },
     {
       "title": "Programming & Web",
       "items": [
-        "JavaScript",
-        "PHP",
-        "Laravel",
-        "Leaflet",
         "HTML",
         "CSS",
-        "Git"
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ionic Framework",
+        "Laravel",
+        "Visual Studio Code",
+        "Android Studio",
+        "React Native"
       ]
     },
     {
       "title": "Tools & Workflow",
       "items": [
-        "Jupyter Notebook",
+        "MySQL",
         "PostgreSQL",
-        "GeoServer",
-        "Mendeley",
-        "Google Workspace",
-        "GitHub"
+        "MariaDB",
+        "pgAdmin",
+        "DBeaver",
+        "Power BI",
+        "Tableau",
+        "Adobe Photoshop",
+        "SketchUp"
       ]
     }
   ],
