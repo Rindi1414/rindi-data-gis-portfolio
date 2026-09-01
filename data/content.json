@@ -120,6 +120,48 @@
           "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.05.02.jpeg"
         }
       ]
+    },
+    {
+      "period": "Jan – Feb 2025",
+      "role": "Survey & Mapping Data Intern ",
+      "organization": "Kementerian ATR/BPN RI",
+      "description": "Verified building locations across 2 villages in Sragen Regency using QuickBird satellite imagery and aerial photography; calculated and validated land-area data across 7 villages and conducted field boundary measurements in the Kalijambe area to support PTSL mapping activities.",
+      "photos": [
+        {
+          "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.04.59.jpeg"
+        },
+        {
+          "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.45.38.jpeg"
+        },
+        {
+          "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.45.38-1-.jpeg"
+        }
+      ]
+    },
+    {
+      "role": "Web GIS Developer & Data Analyst",
+      "period": "Apr – Dec 2024",
+      "organization": "Kementrian Pendidikan, Kebudayaan, Riset & Teknologi Direktorat Jenderal Pendidikan Vokasi",
+      "description": "Developed an interactive WebGIS platform and thematic maps for Ngargosari Village to support local tourism and economic planning; also led entrepreneurship workshops and resident training programs designed to strengthen local tourism capacity and support professional certification for local guides.",
+      "photos": [
+        {
+          "image": "/assets/uploads/screenshot-2026-09-01-154951.png"
+        },
+        {
+          "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.45.39.jpeg"
+        }
+      ]
+    },
+    {
+      "period": "Jan – Feb 2024",
+      "role": "Data & GIS Analyst Intern ",
+      "organization": "Dinas Pekerjaan Umum, Perumahan, Dan Energi Sumber Daya Mineral Daerah Istimewa Yogyakarta ",
+      "description": "Analyzed 12 months of monitoring well data and produced 8 thematic maps to classify groundwater depth and exploitation rates across DIY; conducted pumping tests and periodic groundwater quality checks across multiple regional sites to support sustainable groundwater resource management.",
+      "photos": [
+        {
+          "image": "/assets/uploads/whatsapp-image-2026-09-01-at-15.05.00-2-.jpeg"
+        }
+      ]
     }
   ],
   "aboutPoints": [
