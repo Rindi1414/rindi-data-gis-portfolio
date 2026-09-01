@@ -248,7 +248,7 @@
     "degree": "D4 Sistem Informasi Geografis",
     "institution": "Sekolah Vokasi, Universitas Gadjah Mada",
     "period": "SIG 2022",
-    "gpa": "3.46"
+    "gpa": "3.55"
   },
   "profile": {
     "name": "Rindi Tri Setyaningsih",
@@ -536,21 +536,5 @@
       "image": "/assets/uploads/screenshot-2026-09-01-121241.png"
     }
   ],
-  "certificates": [
-    {
-      "year": "Add year",
-      "name": "Certificate / Training Title",
-      "issuer": "Issuer / Institution"
-    },
-    {
-      "year": "Add year",
-      "name": "Seminar / Training",
-      "issuer": "Issuer / Institution"
-    },
-    {
-      "year": "Add year",
-      "name": "Course / Certification",
-      "issuer": "Issuer / Institution"
-    }
-  ]
+  "certificates": []
 }
