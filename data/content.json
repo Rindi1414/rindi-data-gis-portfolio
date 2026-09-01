@@ -1,29 +1,7 @@
 {
-  "profile": {
-    "name": "Rindi Tri Setyaningsih",
-    "headline": "GIS & Data Analyst",
-    "intro": "GIS and Data Analyst with a background in Geographic Information Systems, specializing in geospatial analysis, spatial data, data visualization, and web-based mapping. I enjoy transforming complex data into clear insights and practical solutions.",
-    "aboutTitle": "Data-minded. Spatially curious.",
-    "about": "I am a Geographic Information Systems graduate from Universitas Gadjah Mada with an interest in data analytics, geospatial analysis, data visualization, and web GIS development. My background combines spatial thinking with programming and data-driven problem solving.\n\nI work with geospatial and structured data to support analysis, visualization, and decision-making. Through academic projects, internships, and community-based projects, I have gained experience working with GIS, spatial databases, remote sensing, web mapping, and data visualization.",
-    "contactText": "Open to opportunities in data analytics, GIS, geospatial analysis, data visualization, and related roles.",
-    "cv": "/assets/CV_Rindi_Tri_Setyaningsih.pdf"
-  },
-  "aboutPoints": [
+  "organizations": [
     {
-      "title": "Data Analytics",
-      "text": "Data cleaning, SQL, Python, data visualization, dashboards, and analytical thinking."
-    },
-    {
-      "title": "GIS & Geospatial",
-      "text": "Spatial analysis, cartography, remote sensing, WebGIS, and geospatial data processing."
-    },
-    {
-      "title": "Problem Solving",
-      "text": "Turning raw data into structured insights and practical outputs to support informed decisions."
-    },
-    {
-      "title": "Web & Visualization",
-      "text": "Interactive maps, web-based data presentation, and user-focused dashboards for clear communication."
+      "photos": []
     }
   ],
   "skills": [
@@ -97,59 +75,21 @@
       ]
     }
   ],
-  "projects": [
-    {
-      "title": "SIPTALA — Landslide Reporting WebGIS ",
-      "category": "GIS / WebGIS",
-      "description": "WebGIS for landslide reporting and identification of landslide-prone areas in Karanganyar, integrating spatial data and web mapping.",
-      "tools": [
-        "Laravel",
-        "Leaflet",
-        "PostGIS",
-        "GeoServer"
-      ],
-      "image": "/assets/uploads/foto.jpeg",
-      "link": ""
-    },
-    {
-      "title": "E-commerce Product Recommendation",
-      "category": "Data Analysis",
-      "description": "Hybrid recommendation system project exploring product similarity and user preference signals from an e-commerce dataset.",
-      "tools": [
-        "Python",
-        "Pandas",
-        "Data Analysis",
-        "Machine Learning"
-      ],
-      "image": "/assets/uploads/digitasi.jpg-1-.jpeg",
-      "link": ""
-    },
-    {
-      "title": "Data Visualization Dashboard",
-      "category": "Data Visualization",
-      "description": "Interactive dashboard work focused on transforming datasets into clear visual stories and decision-support views.",
-      "tools": [
-        "Tableau",
-        "Data Visualization",
-        "Dashboard"
-      ],
-      "image": "",
-      "link": ""
-    },
-    {
-      "title": "UMKM Mapping — Sabat Pulau Nasi",
-      "category": "GIS / WebGIS",
-      "description": "Mapping and inventory of local MSMEs with interactive story maps to support community and tourism information.",
-      "tools": [
-        "GIS",
-        "ArcGIS",
-        "Story Map",
-        "Spatial Data"
-      ],
-      "image": "",
-      "link": ""
-    }
-  ],
+  "education": {
+    "degree": "D4 Sistem Informasi Geografis",
+    "institution": "Sekolah Vokasi, Universitas Gadjah Mada",
+    "period": "SIG 2022",
+    "gpa": "3.46"
+  },
+  "profile": {
+    "name": "Rindi Tri Setyaningsih",
+    "headline": "GIS & Data Analyst",
+    "intro": "GIS and Data Analyst with a background in Geographic Information Systems, specializing in geospatial analysis, spatial data, data visualization, and web-based mapping. I enjoy transforming complex data into clear insights and practical solutions.",
+    "aboutTitle": "Data-minded. Spatially curious.",
+    "about": "I am a Geographic Information Systems graduate from Universitas Gadjah Mada with an interest in data analytics, geospatial analysis, data visualization, and web GIS development. My background combines spatial thinking with programming and data-driven problem solving.\n\nI work with geospatial and structured data to support analysis, visualization, and decision-making. Through academic projects, internships, and community-based projects, I have gained experience working with GIS, spatial databases, remote sensing, web mapping, and data visualization.",
+    "contactText": "Open to opportunities in data analytics, GIS, geospatial analysis, data visualization, and related roles.",
+    "cv": "/assets/CV_Rindi_Tri_Setyaningsih.pdf"
+  },
   "experience": [
     {
       "period": "Add period",
@@ -164,12 +104,124 @@
       "description": "Community-oriented mapping projects including MSME inventory, story maps, tourism information, and disaster mitigation mapping."
     }
   ],
-  "education": {
-    "degree": "D4 Sistem Informasi Geografis",
-    "institution": "Sekolah Vokasi, Universitas Gadjah Mada",
-    "period": "SIG 2022",
-    "gpa": "3.46"
-  },
+  "aboutPoints": [
+    {
+      "title": "Data Analytics",
+      "text": "Data cleaning, SQL, Python, data visualization, dashboards, and analytical thinking."
+    },
+    {
+      "title": "GIS & Geospatial",
+      "text": "Spatial analysis, cartography, remote sensing, WebGIS, and geospatial data processing."
+    },
+    {
+      "title": "Problem Solving",
+      "text": "Turning raw data into structured insights and practical outputs to support informed decisions."
+    },
+    {
+      "title": "Web & Visualization",
+      "text": "Interactive maps, web-based data presentation, and user-focused dashboards for clear communication."
+    }
+  ],
+  "contacts": [
+    {
+      "label": "Email",
+      "url": "mailto:rinditrisetyaningsih@gmail.com"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/rinditrisetyaningsih"
+    },
+    {
+      "label": "CV",
+      "url": "https://rindi-data-gis-portfolio.pages.dev/assets/CV_Rindi_Tri_Setyaningsih.pdf"
+    }
+  ],
+  "projects": [
+    {
+      "title": "SIPTALA — Landslide Reporting WebGIS ",
+      "category": "GIS / WebGIS",
+      "description": "A WebGIS system for landslide reporting and identification of landslide-prone areas in Karanganyar. The system integrates spatial data, web mapping, and reporting features to support landslide monitoring and information management.",
+      "tools": [
+        "Laravel",
+        "Leaflet",
+        "PostGIS",
+        "GeoServer",
+        "PostgreSQL",
+        "WebGIS"
+      ],
+      "image": "/assets/uploads/beranda.png",
+      "link": ""
+    },
+    {
+      "title": "RITAMAP — Dashboard RUPTL PT PLN Persero",
+      "category": "GIS / WebGIS",
+      "description": "A geospatial mapping project developed during my experience at PLN UIP JBT, focusing on spatial data processing, visualization, and mapping to support operational information and geospatial data management.",
+      "tools": [
+        "ArcGIS",
+        "HTML CSS",
+        "Leaflet",
+        "Laravel",
+        "MySQL",
+        "Geospatial Data",
+        "Spatial Analysis",
+        "Mapping"
+      ],
+      "image": "/assets/uploads/screenshot-2026-09-01-114017.png",
+      "link": "https://sig.sv.ugm.ac.id/tag/ritamap/"
+    },
+    {
+      "title": "Sleman Foodie — Culinary WebGIS",
+      "category": "GIS / WebGIS",
+      "description": "A WebGIS platform for exploring culinary destinations in Sleman, Yogyakarta through an interactive map-based interface. The project integrates spatial data, database management, and interactive web mapping to present location-based culinary information.",
+      "tools": [
+        "LeafletJS",
+        "GeoJSON",
+        "DBeaver",
+        "Bootstrap",
+        "WebGIS",
+        "Spatial Data"
+      ],
+      "image": "/assets/uploads/screenshot-2026-09-01-113517.png",
+      "link": ""
+    },
+    {
+      "title": "Yogyakarta Sea Wonderland — Coastal Tourism WebGIS",
+      "category": "GIS / WebGIS",
+      "description": "A WebGIS platform for exploring coastal tourism destinations in Gunungkidul, Yogyakarta. The project combines spatial data, interactive web mapping, and tourism information to create an accessible location-based tourism platform.",
+      "tools": [
+        "Laravel",
+        "QGIS",
+        "GeoServer",
+        "Python",
+        "DBeaver",
+        "Bootstrap",
+        "FontAwesome",
+        "Visual Studio Code"
+      ],
+      "image": "/assets/uploads/screenshot-2026-09-01-113656.png",
+      "link": ""
+    },
+    {
+      "title": "Python-Based LiDAR Point Cloud Analysis & 3D Geospatial Modeling",
+      "category": "Remote Sensing",
+      "description": "A comprehensive LiDAR point cloud analysis project combining Python, 3D geospatial processing, and machine learning. The workflow covers Drone–SLAM co-registration using Point-to-Plane ICP, point cloud classification with Random Forest, ground filtering with CSF, DSM and DTM generation, and tree volume estimation using DBSCAN clustering and voxel-based modeling.",
+      "tools": [
+        "Python",
+        "Open3D",
+        "Scikit-learn",
+        "NumPy",
+        "SciPy",
+        "LiDAR",
+        "Random Forest",
+        "ICP",
+        "DBSCAN",
+        "CSF",
+        "DSM / DTM",
+        "3D Geospatial Analysis"
+      ],
+      "image": "/assets/uploads/screenshot-2026-09-01-114325.png"
+    }
+  ],
   "certificates": [
     {
       "year": "Add year",
@@ -185,20 +237,6 @@
       "year": "Add year",
       "name": "Course / Certification",
       "issuer": "Issuer / Institution"
-    }
-  ],
-  "contacts": [
-    {
-      "label": "Email",
-      "url": "mailto:rinditrisetyaningsih@gmail.com"
-    },
-    {
-      "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/rinditrisetyaningsih"
-    },
-    {
-      "label": "CV",
-      "url": "https://rindi-data-gis-portfolio.pages.dev/assets/CV_Rindi_Tri_Setyaningsih.pdf"
     }
   ]
 }
