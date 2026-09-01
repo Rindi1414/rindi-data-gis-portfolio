@@ -11,7 +11,7 @@
   "aboutPoints": [
     {
       "title": "Data Analytics",
-      "text": "Data cleaning, SQL, Python, visualization, dashboards, and analytical thinking."
+      "text": "Data cleaning, SQL, Python, data visualization, dashboards, and analytical thinking."
     },
     {
       "title": "GIS & Geospatial",
@@ -19,11 +19,11 @@
     },
     {
       "title": "Problem Solving",
-      "text": "From raw datasets to structured insights and decision-ready outputs."
+      "text": "Turning raw data into structured insights and practical outputs to support informed decisions."
     },
     {
       "title": "Web & Visualization",
-      "text": "Interactive maps, web-based data presentation, and user-focused dashboards."
+      "text": "Interactive maps, web-based data presentation, and user-focused dashboards for clear communication."
     }
   ],
   "skills": [
